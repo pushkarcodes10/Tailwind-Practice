@@ -18,7 +18,7 @@ export const Hero = () => {
       </span>
       <h1
         style={{ fontFamily: "boldonse" }}
-        className="text-4xl/15 font-light text-center text-pretty mt-6"
+        className="text-7xl/25 font-light text-center text-pretty mt-6"
       >
         Magically simplify
         <br />
