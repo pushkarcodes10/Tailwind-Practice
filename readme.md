@@ -1,69 +1,77 @@
 # Tailwind CSS & Vanilla CSS Practice Projects
 
-Welcome to the **Tailwind Practice** repository. This workspace serves as a dedicated environment for practicing modern web layouts, responsive design, and CSS strategies, ranging from utility-first Tailwind CSS to structured Vanilla CSS.
+Welcome to the **Tailwind Practice** workspace. This repository serves as a dedicated environment for practicing modern web layouts, responsive design, and CSS configuration strategies—ranging from utility-first Tailwind CSS v4 styling to structured Vanilla CSS integrations.
 
 ---
 
-## 🚀 Current Project: Fintech Landing Page
+## 📁 Repository Overview
 
-Located in the [`vanilaCSS`](file:///c:/Users/Pushkar%20Raj/Desktop/Practice-Codes/tailwind-practice/vanilaCSS) directory, this project is a premium, responsive landing page for a modern fintech startup ("*Magically simplify accounting and taxes*") built using **Next.js 16**, **React 19**, and **Tailwind CSS v4**.
+This repository contains three independent Next.js projects, each exploring different styling methodologies:
 
-It showcases a hybrid styling approach where Tailwind CSS v4 is configured alongside semantic, modular vanilla CSS classes for absolute control over the design system.
+1. **[`vanilaCSS`](./vanilaCSS)**: A hybrid approach using Next.js, React 19, and Tailwind CSS v4, combining Tailwind utility classes with custom traditional Vanilla CSS modules for layout structures and styling.
+2. **[`landing-page`](./landing-page)**: A dark-themed waitlist landing page focusing on Tailwind v4 configuration, including custom `@theme` declarations, gradient text styling, interactive forms, and decorative ambient border glows.
+3. **[`tailwind-practice`](./tailwind-practice)**: A layout practicing workspace emphasizing typography integrations (such as custom Google Fonts), custom Tailwind sizing options, line heights, and micro-interactions.
 
-### Key Features
-* 📱 **Fully Responsive Layout**: Optimised for all screen sizes from mobile to wide desktops.
-* 💅 **Premium Aesthetics**: Features smooth gradients, modern typography (Inter & Space Grotesk), clean border lines, and micro-interactions.
-* 📦 **Modular Components**:
-  * [Navbar](file:///c:/Users/Pushkar%20Raj/Desktop/Practice-Codes/tailwind-practice/vanilaCSS/src/components/navbar.tsx): A clean, interactive top-navigation bar.
-  * [Hero](file:///c:/Users/Pushkar%20Raj/Desktop/Practice-Codes/tailwind-practice/vanilaCSS/src/components/hero.tsx): An attention-grabbing hero section with dual CTA buttons and taglines.
-  * [Container](file:///c:/Users/Pushkar%20Raj/Desktop/Practice-Codes/tailwind-practice/vanilaCSS/src/components/container.tsx): A wrapper to enforce consistent horizontal alignment and padding.
+---
+
+## 🚀 Projects & Key Learnings
+
+### 1. Hybrid Vanilla CSS (`vanilaCSS`)
+A premium landing page for a modern fintech startup showcasing semantic styling control.
+* **Core Concepts**: Combining utility classes with structured class definitions to manage complex structures.
+* **Key Components**:
+  * [Navbar](./vanilaCSS/src/components/navbar.tsx): A clean, interactive top-navigation bar.
+  * [Hero](./vanilaCSS/src/components/hero.tsx): A startup hero section with dual CTA buttons and clean layout grids.
+  * [Container](./vanilaCSS/src/components/container.tsx): A layout wrapper enforcing consistent page alignment.
+* **Styling**: Managed via [globals.css](./vanilaCSS/src/app/globals.css) using traditional styling overrides.
+
+### 2. Waitlist Landing Page (`landing-page`)
+A high-fidelity landing page with theme customization.
+* **Core Concepts**: Custom Tailwind v4 colors configured directly in the CSS file.
+* **Key Features**:
+  * **Theme Customization**: Leverages Tailwind v4's direct `@theme` utility to declare custom colors (e.g., custom primary using `oklch`).
+  * **Ambient Glow Borders**: Uses absolute gradient lines (`bg-linear-to-r` from transparent via primary to transparent) to create modern interactive inputs.
+  * **Gradients**: Employs text background clipping and gradient fades (`bg-clip-text` with `bg-linear-to-b`).
+* **Key Files**:
+  * [Hero Component](./landing-page/src/components/hero.tsx): Form input and interactive waitlist join button.
+  * [Globals CSS](./landing-page/src/app/globals.css): Custom `@theme` config.
+
+### 3. Typography & Micro-interactions (`tailwind-practice`)
+A Next.js landing page template focusing on typography refinement.
+* **Core Concepts**: Integrating external font engines and fine-tuning Tailwind layout parameters.
+* **Key Features**:
+  * **Custom Fonts**: Integrates custom typography (`Boldonse`) loaded through `@import` and embedded inline.
+  * **Fine-Tuning Utilities**: Leverages Tailwind v4 line-height and margin utilities (e.g., `text-7xl/25` for precise tracking).
+  * **Micro-interactions**: Hover effects on interactive elements with transition animations.
+* **Key Files**:
+  * [Hero Component](./tailwind-practice/src/components/hero.tsx): Large styled headers, spacing adjustments, and image display.
+  * [Globals CSS](./tailwind-practice/src/app/globals.css): Font imports.
 
 ---
 
 ## 🛠️ Tech Stack & Dependencies
 
-* **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+All projects in this repository share a modern web stack:
+* **Framework**: [Next.js 16 (App Router)](https://nextjs.org/)
 * **Library**: [React 19](https://react.dev/)
-* **Styling**: 
-  * [Tailwind CSS v4](https://tailwindcss.com/)
-  * PostCSS (`@tailwindcss/postcss`)
-  * Custom Vanilla CSS rules for layout structuring
-* **Fonts**: [Google Fonts](https://fonts.google.com/) (Inter, Space Grotesk)
+* **CSS Engine**: [Tailwind CSS v4](https://tailwindcss.com/)
+* **Compiler/Postprocessor**: PostCSS (`@tailwindcss/postcss`)
 * **Language**: [TypeScript](https://www.typescriptlang.org/)
-
----
-
-## 📁 Repository Structure
-
-```text
-tailwind-practice/
-├── readme.md                       # This file (Root Workspace Documentation)
-└── vanilaCSS/                      # Next.js Practice Workspace
-    ├── package.json                # Project dependencies and scripts
-    ├── postcss.config.mjs          # PostCSS configuration for Tailwind CSS v4
-    ├── tsconfig.json               # TypeScript configuration
-    ├── public/                     # Static assets (images, icons)
-    └── src/
-        ├── components/             # Reusable UI Components
-        │   ├── container.tsx       # Layout alignment wrapper
-        │   ├── hero.tsx            # Main hero section markup
-        │   └── navbar.tsx          # Navigation header component
-        └── app/
-            ├── globals.css         # Import Tailwind CSS + Custom Vanilla CSS styles
-            ├── layout.tsx          # Main Root Layout
-            └── page.tsx            # Main Home Page rendering the components
-```
 
 ---
 
 ## ⚙️ Getting Started
 
-Follow these steps to run the project locally:
+Follow these steps to run any of the practice projects locally:
 
-### 1. Navigate to the project directory
-Open your terminal and navigate to the project directory:
+### 1. Navigate to the desired project
+Open your terminal and navigate to the project directory you want to run (e.g., `vanilaCSS`, `landing-page`, or `tailwind-practice`):
 ```bash
 cd vanilaCSS
+# or
+cd landing-page
+# or
+cd tailwind-practice
 ```
 
 ### 2. Install dependencies
@@ -73,19 +81,10 @@ npm install
 ```
 
 ### 3. Run the development server
-Start the local Next.js dev server:
+Start the local Next.js development server:
 ```bash
 npm run dev
 ```
 
 ### 4. View in Browser
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the live Fintech landing page.
-
----
-
-## 💡 Styling Approach
-
-This project combines the power of utility-based design and semantic vanilla CSS:
-1. **Tailwind Import**: Tailwind CSS v4 is integrated in [`globals.css`](file:///c:/Users/Pushkar%20Raj/Desktop/Practice-Codes/tailwind-practice/vanilaCSS/src/app/globals.css) via `@import "tailwindcss";`.
-2. **Vanilla Layout & Components**: Layout structures (e.g., page grids, decorative borders, custom active states) are managed with clean, traditional CSS classes defined within `globals.css`.
-3. **Hover & Micro-animations**: Subtle transitions and hover effects (e.g., buttons shifting slightly, inline SVGs sliding right) are fully custom-crafted to create a polished user experience.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the live app.
