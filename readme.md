@@ -6,11 +6,12 @@ Welcome to the **Tailwind Practice** workspace. This repository serves as a dedi
 
 ## 📁 Repository Overview
 
-This repository contains three independent Next.js projects, each exploring different styling methodologies:
+This repository contains four independent Next.js projects, each exploring different styling methodologies:
 
 1. **[`vanilaCSS`](./vanilaCSS)**: A hybrid approach using Next.js, React 19, and Tailwind CSS v4, combining Tailwind utility classes with custom traditional Vanilla CSS modules for layout structures and styling.
 2. **[`landing-page`](./landing-page)**: A dark-themed waitlist landing page focusing on Tailwind v4 configuration, including custom `@theme` declarations, gradient text styling, interactive forms, and decorative ambient border glows.
 3. **[`tailwind-practice`](./tailwind-practice)**: A layout practicing workspace emphasizing typography integrations (such as custom Google Fonts), custom Tailwind sizing options, line heights, and micro-interactions.
+4. **[`responsive-design`](./responsive-design)**: A workspace dedicated to building responsive interfaces and modern design patterns, incorporating custom shadows (e.g., Aceternity UI-inspired) and flexible component layouts.
 
 ---
 
@@ -47,6 +48,13 @@ A Next.js landing page template focusing on typography refinement.
   * [Hero Component](./tailwind-practice/src/components/hero.tsx): Large styled headers, spacing adjustments, and image display.
   * [Globals CSS](./tailwind-practice/src/app/globals.css): Font imports.
 
+### 4. Responsive Interfaces (`responsive-design`)
+A Next.js project focused on responsive component layouts and modern UI design patterns.
+* **Core Concepts**: Implementing flexible, responsive layouts and custom styling configurations.
+* **Key Components**:
+  * [Navbar](./responsive-design/src/components/navbar.tsx): A clean, responsive top-navigation bar.
+* **Styling**: Managed via [globals.css](./responsive-design/src/app/globals.css) using custom `@theme` configurations for unique shadow definitions.
+
 ---
 
 ## 🛠️ Tech Stack & Dependencies
@@ -65,13 +73,15 @@ All projects in this repository share a modern web stack:
 Follow these steps to run any of the practice projects locally:
 
 ### 1. Navigate to the desired project
-Open your terminal and navigate to the project directory you want to run (e.g., `vanilaCSS`, `landing-page`, or `tailwind-practice`):
+Open your terminal and navigate to the project directory you want to run (e.g., `vanilaCSS`, `landing-page`, `tailwind-practice`, or `responsive-design`):
 ```bash
 cd vanilaCSS
 # or
 cd landing-page
 # or
 cd tailwind-practice
+# or
+cd responsive-design
 ```
 
 ### 2. Install dependencies
